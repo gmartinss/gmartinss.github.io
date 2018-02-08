@@ -1,0 +1,183 @@
+/* GLOBAL PROPERTIES */
+:root {
+  --container-bg-color: #333;
+  --left-bg-color: rgba(223, 39, 39, 0.6);
+  --left-button-hover-color: rgba(161, 11, 11, 0.3);
+  --right-bg-color: rgba(43, 43, 43, 0.5);
+  --right-button-hover-color: rgba(92, 92, 92, 0.3);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1200ms;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* END OF GLOBAL PROPERTIES */
+
+.container {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--container-bg-color);
+}
+
+.split {
+  margin: 0;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 90%;
+  z-index: 2;
+}
+
+.left::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--left-bg-color);
+}
+
+.left {
+  background-size: cover;
+  background: url('images/tennis-small.jpg') center center no-repeat;
+}
+
+.right::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--right-bg-color);
+}
+
+.right {
+  background-size: cover;
+  background: url('images/programming-small.jpg') center center no-repeat;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.button {
+  width: 100px;
+  color: #fff;
+  display: block;
+  padding: 8px 0;
+  margin: 10px auto;
+  text-align: center;
+  text-decoration: none;
+  border: 1.5px solid white;
+  font-family: 'Raleway', sans-serif;
+}
+
+@media screen and (min-width: 560px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .split {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+  }
+  
+  .split.left {
+    left: 0;
+    background-size: cover;
+  }
+  
+  .split.left:before {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    background: var(--left-bg-color);
+  }
+  
+  .split.right {
+    right: 0;
+    background-size: cover;
+  }
+  
+  .split.right:before {
+    z-index: 0;
+    width: 100%;
+    content: "";
+    height: 100%;
+    position: absolute;
+    background: var(--right-bg-color);
+  }
+  
+  .split.left, .split.left:before, .split.right, .split.right:before {
+    transition: all var(--speed) ease-in-out;
+  }
+  
+  .hover-left .left {
+    width: var(--hover-width);
+  }
+  
+  .hover-left .right {
+    width: var(--other-width);
+  }
+  
+  .hover-left .right:before {
+    z-index: 2;
+  }
+  
+  .hover-right .right {
+    width: var(--hover-width);
+  }
+  
+  .hover-right .left {
+    width: var(--other-width);
+  }
+  
+  .hover-right .left:before {
+    z-index: 2;
+  }
+  
+  h1 {
+    white-space: nowrap;
+  }
+  
+  .button {
+    padding-top: 7px;
+  }
+  
+  .split.left .button:hover {
+    border-color: var(--left-button-hover-color);
+    background-color: var(--left-button-hover-color);
+  }
+  
+  .split.right .button:hover {
+    border-color: var(--right-button-hover-color);
+    background-color: var(--right-button-hover-color);
+  }
+
+  @media screen and (min-width: 900px) {
+    h1 { font-size: 5vw; }
+    .button { font-size: 2vw; }
+  }
