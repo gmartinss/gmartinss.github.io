@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="web development, CSS3, HTML5, javascript, front end, FreeCodeCamp, project, SVG">
+    <meta name="author" content="Gui Martins">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Ubuntu:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="hello.css">
+    <title>Gui Martins - Say Hello!</title>
+  </head>
+
+  <body>
+    <div class="bigWrapper">
+        <header>
+            <nav id="navbar">
+              <div class="container">
+                <span class="open-slide">
+                  <a href="#">
+                    <svg width="30" height="30">
+                      <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                      <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                      <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+                    </svg>
+                  </a>
+                </span> <!-- END OF open-slide -->
+      
+                <span id="span-img"><img id="header-fig" src="images/gui.jpg"></span>
+      
+                <span id="header-name">Gui Martins</span>
+      
+                <ul class="nav-ul">
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="done.html">WHERE I COME FROM</a></li>
+                  <li><a href="doing.html">WHERE I'M GOING</a></li>
+                </ul>
+      
+                <div class="slide-menu">
+                  <span class="close">&times;</span>
+                  <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="done.html">WHERE I COME FROM</a></li>
+                    <li><a href="doing.html">WHERE I'M GOING</a></li>
+                  </ul>
+                </div> <!-- END OF slide-menu -->
+              </div> <!-- END OF container -->
+            </nav> <!-- END OF navbar -->
+          </header>
+      
+          <section id="form">
+            <div class="container">
+              <form action="contact.php" method="post">
+                <label for="firstName">First Name:</label>
+                <input type="text" name="first_name" id="firstName" placeholder="First Name">
+                <label for="lastName">Last Name:</label>
+                <input type="text" name="last_name" id="lastName" placeholder="Last Name">
+                <label for="address">Email address:</label>
+                <input type="email" name="email" placeholder="name@gmail.com" id="address">
+                <label for="message">Write your message below:</label>
+                <textarea name="comments" cols="30" rows="20" id="message" placeholder="Hello, Gui!"></textarea>
+                <button type="submit" value="submit">SEND</button>
+              </form>
+            </div>
+          </section> <!-- END OF form -->
+      
+          <footer>
+            <div class="container">
+              <div class="wrapper">
+                <h4>Gui Martins - Web Developer</h4>
+                <h5>Libraries used: ZERO!</h5>
+              </div>
+            </div>
+          </footer> <!-- END OF footer -->
+    </div>
+    <script src="hello.js"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="web development, CSS3, HTML5, javascript, front end, FreeCodeCamp, project, SVG">
+    <meta name="author" content="Gui Martins">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Ubuntu:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="hello.css">
+    <title>Gui Martins - Contato</title>
+  </head>
+
+  <body>
+    <div class="bigWrapper">
+      <header>
+        <nav id="navbar">
+          <div class="container">
+            <span class="open-slide">
+              <a href="#">
+                <svg width="30" height="30">
+                  <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                  <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                  <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+                </svg>
+              </a>
+            </span> <!-- END OF open-slide -->
+  
+            <span id="span-img"><img id="header-fig" src="images/gui.jpg"></span>
+  
+            <span id="header-name">Gui Martins</span>
+  
+            <ul class="nav-ul">
+              <li><a href="inicio.html">INÍCIO</a></li>
+              <li><a href="feito.html">DE ONDE VENHO</a></li>
+              <li><a href="fazendo.html">PARA ONDE VOU</a></li>
+            </ul>
+  
+            <div class="slide-menu">
+              <span class="close">&times;</span>
+              <ul>
+                <li><a href="inicio.html">INÍCIO</a></li>
+                <li><a href="feito.html">DE ONDE VENHO</a></li>
+                <li><a href="fazendo.html">PARA ONDE VOU</a></li>
+              </ul>
+            </div> <!-- END OF slide-menu -->
+          </div> <!-- END OF container -->
+        </nav> <!-- END OF navbar -->
+      </header>
+      
+      <section id="form" action="hello.php" method="post">
+        <div class="container">
+          <form action="">
+            <label for="firstName">Nome:</label>
+            <input type="text" name="first_name" id="firstName" placeholder="Francisco">
+            <label for="lastName">Sobrenome:</label>
+            <input type="text" name="last_name" id="lastName" placeholder="Silva">
+            <label for="address">Email:</label>
+            <input type="email" name="email" placeholder="franciscosilva@gmail.com" id="address">
+            <label for="message">Escreva abaixo a sua mensagem:</label>
+            <textarea name="comments" cols="30" rows="20" id="message" placeholder="Oi, Gui!"></textarea>
+            <button type="submit" value="submit">ENVIAR</button>
+          </form>
+        </div>
+      </section> <!-- END OF form -->
+  
+      <footer>
+        <div class="container">
+          <div class="wrapper">
+            <h4>Gui Martins - Desenvolvedor Web</h4>
+            <h5>Libraries usadas: ZERO!</h5>
+          </div>
+        </div>
+      </footer> <!-- END OF footer -->
+    </div>
+    <script src="hello.js"></script>
+  </body>
+</html>
